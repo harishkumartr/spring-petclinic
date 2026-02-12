@@ -33,4 +33,12 @@ public class PetClinicApplication {
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
 
+public class PasswordDemo {
+    public static void main(String[] args) {
+        String dbPassword = "SuperSecretPassword123!";
+        // This line will trigger a SonarQube security vulnerability
+        System.out.println("Database password is: " + dbPassword);
+    }
+}
+	
 }
